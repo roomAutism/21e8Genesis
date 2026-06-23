@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Autism Room Inc." />
+    <title>Autism Room Inc.</title>
+    <style>
+      :root {
+        background: #ffffff;
+        color: #000000;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-width: 320px;
+        min-height: 100%;
+        margin: 0;
+      }
+
+      body {
+        min-height: 100svh;
+        background: #ffffff;
+      }
+
+      main {
+        display: flex;
+        min-height: 100svh;
+        flex-direction: column;
+        padding: clamp(32px, 7vw, 108px) clamp(24px, 8vw, 144px) 28px;
+      }
+
+      article {
+        width: min(100%, 680px);
+        margin: auto;
+        text-align: center;
+      }
+
+      p {
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .body-copy {
+        margin-top: 0;
+        font-size: clamp(1.15rem, 2vw, 1.45rem);
+        line-height: 1.9;
+      }
+
+      .signature {
+        margin-top: clamp(3.25rem, 8vh, 5.5rem);
+        font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+        letter-spacing: 0.01em;
+        line-height: 1.8;
+      }
+
+      footer {
+        align-self: center;
+        margin-top: auto;
+        padding-top: 6rem;
+      }
+
+      a {
+        color: #000000;
+        font-size: 0.7rem;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      a:focus-visible {
+        outline: 1px solid #000000;
+        outline-offset: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <p class="body-copy">The room has existed longer than any of us.<br />We simply found the door.</p>
+        <p class="signature">Autism Room Inc.</p>
+        <p class="signature">More soon.</p>
+      </article>
+      <footer><a href="https://x.com/autismroomcorp" target="_blank" rel="noopener noreferrer" aria-label="Autism Room Inc. on X">X</a></footer>
+    </main>
+  </body>
+</html>
