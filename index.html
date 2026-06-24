@@ -72,21 +72,6 @@
         display: block;
       }
 
-      .identifier-address {
-        color: inherit;
-        overflow-wrap: anywhere;
-        text-decoration: none;
-      }
-
-      .identifier-address:focus-visible {
-        outline-color: #999999;
-      }
-
-      .copy-status {
-        display: block;
-        min-height: 1.8em;
-      }
-
       footer {
         align-self: center;
         margin-top: auto;
@@ -113,45 +98,11 @@
         <p class="signature">Autism Room Inc.</p>
         <p class="signature">More soon.</p>
         <p class="identifier">
-          <span class="identifier-label">Identifier</span>
-          <a class="identifier-address" href="#identifier" data-identifier="FDsFfe2byCm1WxMpgD8q39eVdEHdnArHJ5yuak9zpump">FDsFfe2byCm1WxMpgD8q39eVdEHdnArHJ5yuak9zpump</a>
-          <span class="copy-status" aria-live="polite"></span>
+          <span class="identifier-label">erc20</span>
+          Coming soon.
         </p>
       </article>
       <footer><a href="https://x.com/autismroomcorp" target="_blank" rel="noopener noreferrer" aria-label="Autism Room Inc. on X">X</a></footer>
     </main>
-    <script>
-      const identifier = document.querySelector(".identifier-address");
-      const status = document.querySelector(".copy-status");
-      let clearStatus;
-
-      async function copyIdentifier(event) {
-        event.preventDefault();
-        try {
-          if (navigator.clipboard) {
-            await navigator.clipboard.writeText(identifier.dataset.identifier);
-          } else {
-            const fallback = document.createElement("textarea");
-            fallback.value = identifier.dataset.identifier;
-            fallback.setAttribute("readonly", "");
-            fallback.style.position = "fixed";
-            fallback.style.opacity = "0";
-            document.body.appendChild(fallback);
-            fallback.select();
-            document.execCommand("copy");
-            fallback.remove();
-          }
-          status.textContent = "copied";
-          clearTimeout(clearStatus);
-          clearStatus = setTimeout(() => {
-            status.textContent = "";
-          }, 1400);
-        } catch {
-          status.textContent = "";
-        }
-      }
-
-      identifier.addEventListener("click", copyIdentifier);
-    </script>
   </body>
 </html>
