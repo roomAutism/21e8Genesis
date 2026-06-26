@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Autism Room Inc." />
-    <title>Autism Room Inc.</title>
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="21e8 Summoning Ritual" />
+    <title>21e8 Summoning Ritual</title>
     <style>
       :root {
-        background: #ffffff;
-        color: #000000;
-        font-family: Georgia, "Times New Roman", serif;
+        background: #000000;
+        color: #ffffff;
+        font-family: "Cormorant Garamond", "EB Garamond", "Spectral", "Iowan Old Style", Georgia, "Times New Roman", Times, serif;
       }
 
       * {
@@ -25,84 +25,107 @@
       }
 
       body {
-        min-height: 100svh;
-        background: #ffffff;
+        min-height: 100vh;
+        background: #000000;
       }
 
       main {
-        display: flex;
-        min-height: 100svh;
-        flex-direction: column;
-        padding: clamp(32px, 7vw, 108px) clamp(24px, 8vw, 144px) 28px;
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+        padding: 0 18px;
       }
 
-      article {
-        width: min(100%, 680px);
-        margin: auto;
+      .ritual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
         text-align: center;
       }
 
-      p {
-        margin: 0;
-        font-weight: 400;
-      }
-
-      .body-copy {
-        margin-top: 0;
-        font-size: clamp(1.15rem, 2vw, 1.45rem);
-        line-height: 1.9;
-      }
-
-      .signature {
-        margin-top: clamp(3.25rem, 8vh, 5.5rem);
-        font-size: clamp(1.05rem, 1.7vw, 1.25rem);
-        letter-spacing: 0.01em;
-        line-height: 1.8;
+      .eyes {
+        display: block;
+        width: 95vw;
+        max-width: 1800px;
+        height: auto;
+        opacity: 0.85;
       }
 
       .identifier {
-        margin-top: clamp(4rem, 10vh, 7rem);
-        color: #999999;
-        font-size: 0.65rem;
-        letter-spacing: 0.035em;
-        line-height: 1.8;
-      }
-
-      .identifier-label {
-        display: block;
+        width: min(95vw, 1800px);
+        margin: 12px 0 0;
+        color: rgba(255, 255, 255, 0.26);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.24em;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
       }
 
       footer {
-        align-self: center;
-        margin-top: auto;
-        padding-top: 6rem;
+        position: absolute;
+        right: 0;
+        bottom: 56px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.32);
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.18em;
+        line-height: 1.8;
+        text-align: center;
       }
 
-      a {
-        color: #000000;
-        font-size: 0.7rem;
-        line-height: 1;
+      footer a {
+        color: inherit;
         text-decoration: none;
+        transition: opacity 160ms ease;
       }
 
-      a:focus-visible {
-        outline: 1px solid #000000;
-        outline-offset: 5px;
+      footer a:hover {
+        opacity: 0.72;
+      }
+
+      footer a:focus-visible {
+        outline: 1px solid rgba(255, 255, 255, 0.38);
+        outline-offset: 6px;
+      }
+
+      .footer-mark {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media (max-width: 700px) {
+        main {
+          padding: 0 14px;
+        }
+
+        .ritual {
+          padding-top: 20px;
+        }
+
+        .identifier {
+          font-size: 9px;
+          letter-spacing: 0.16em;
+        }
+
       }
     </style>
   </head>
   <body>
     <main>
-      <article>
-        <p class="body-copy">The room has existed longer than any of us.<br />We simply found the door.</p>
-        <p class="signature">Autism Room Inc.</p>
-        <p class="signature">More soon.</p>
-        <p class="identifier">
-          <span class="identifier-label">erc20</span>
-          Coming soon.
-        </p>
-      </article>
-      <footer><a href="https://x.com/autismroomcorp" target="_blank" rel="noopener noreferrer" aria-label="Autism Room Inc. on X">X</a></footer>
+      <section class="ritual" aria-label="21e8 Summoning Ritual">
+        <img class="eyes" src="eyes-artifact.png" alt="" />
+        <p class="identifier">00000000000000000021e800c1e8df51b22c1588e5a624bea17e9faa34b2dc4a</p>
+      </section>
+      <footer>
+        <span class="footer-mark"><a href="https://x.com/21e8Genesis" target="_blank" rel="noopener noreferrer" aria-label="21e8Genesis on X">𝕏</a></span>
+      </footer>
     </main>
   </body>
 </html>
