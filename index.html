@@ -3,129 +3,84 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="21e8 Summoning Ritual" />
-    <title>21e8 Summoning Ritual</title>
+    <meta name="theme-color" content="#050805" />
+    <meta name="description" content="@OnlineLobotomy" />
+    <title>@OnlineLobotomy</title>
     <style>
-      :root {
-        background: #000000;
-        color: #ffffff;
-        font-family: "Cormorant Garamond", "EB Garamond", "Spectral", "Iowan Old Style", Georgia, "Times New Roman", Times, serif;
-      }
-
       * {
         box-sizing: border-box;
       }
 
       html,
       body {
+        width: 100%;
         min-width: 320px;
-        min-height: 100%;
+        height: 100%;
         margin: 0;
+        overflow: hidden;
       }
 
       body {
-        min-height: 100vh;
-        background: #000000;
+        background: #050805 url("background.gif") center center / cover no-repeat fixed;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        content: "";
+        background: rgba(0, 0, 0, 0.16);
       }
 
       main {
         position: relative;
-        min-height: 100vh;
-        overflow: hidden;
-        padding: 0 18px;
-      }
-
-      .ritual {
+        z-index: 1;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        text-align: center;
-      }
-
-      .eyes {
-        display: block;
-        width: 95vw;
-        max-width: 1800px;
-        height: auto;
-        opacity: 0.85;
-      }
-
-      .identifier {
-        width: min(95vw, 1800px);
-        margin: 12px 0 0;
-        color: rgba(255, 255, 255, 0.26);
-        font-family: Georgia, "Times New Roman", Times, serif;
-        font-size: 10px;
-        font-weight: 400;
-        letter-spacing: 0.24em;
-        line-height: 1.7;
-        overflow-wrap: anywhere;
-      }
-
-      footer {
-        position: absolute;
-        right: 0;
-        bottom: 56px;
-        left: 0;
-        display: flex;
+        width: 100%;
+        height: 100svh;
+        align-items: flex-end;
         justify-content: center;
-        color: rgba(255, 255, 255, 0.32);
-        font-size: 13px;
-        font-weight: 400;
-        letter-spacing: 0.18em;
-        line-height: 1.8;
-        text-align: center;
+        padding: 0 24px clamp(52px, 8vh, 78px);
       }
 
-      footer a {
-        color: inherit;
+      .link {
+        color: rgba(255, 255, 255, 0.92);
+        font-family: "Old English Text MT", "Apple Chancery", Georgia, serif;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 1;
         text-decoration: none;
+        text-shadow: 0 1px 12px rgba(0, 0, 0, 0.52);
         transition: opacity 160ms ease;
       }
 
-      footer a:hover {
-        opacity: 0.72;
+      .link:hover {
+        opacity: 0.68;
+        text-decoration: underline;
       }
 
-      footer a:focus-visible {
-        outline: 1px solid rgba(255, 255, 255, 0.38);
+      .link:focus-visible {
+        outline: 1px solid rgba(255, 255, 255, 0.72);
         outline-offset: 6px;
-      }
-
-      .footer-mark {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
       }
 
       @media (max-width: 700px) {
         main {
-          padding: 0 14px;
+          padding-bottom: 54px;
         }
 
-        .ritual {
-          padding-top: 20px;
+        .link {
+          font-size: 16px;
         }
-
-        .identifier {
-          font-size: 9px;
-          letter-spacing: 0.16em;
-        }
-
       }
     </style>
   </head>
   <body>
     <main>
-      <section class="ritual" aria-label="21e8 Summoning Ritual">
-        <img class="eyes" src="eyes-artifact.png" alt="" />
-        <p class="identifier">00000000000000000021e800c1e8df51b22c1588e5a624bea17e9faa34b2dc4a</p>
-      </section>
-      <footer>
-        <span class="footer-mark"><a href="https://x.com/21e8Genesis" target="_blank" rel="noopener noreferrer" aria-label="21e8Genesis on X">𝕏</a></span>
-      </footer>
+      <a class="link" href="https://x.com/OnlineLobotomy" target="_blank" rel="noopener noreferrer">𝕷𝖔𝖇𝖔𝖙𝖔𝖒𝖞-𝕺𝖓𝖑𝖎𝖓𝖊</a>
     </main>
   </body>
 </html>
